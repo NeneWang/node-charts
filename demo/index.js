@@ -5,6 +5,7 @@ const donut = require('../lib/donut')
 const gauge = require('../lib/gauge')
 const scatter = require('../lib/scatter')
 const { bg, fg } = require('../lib/utils')
+const annotation = require('../lib/annotation')
 
 // Scatter
 const scatterData = []
@@ -88,3 +89,13 @@ console.log(gauge(gaugeData1, { radius: 7 }))
 console.log(gauge(gaugeData2, {
   radius: 7, style: bg('green', 2), bgStyle: bg('magenta', 2)
 }))
+
+
+const notes = [
+  {key: 'a', style: bg('green', 2)},
+  {key: 'b', style: bg('red', 2)},
+]
+
+console.log(annotation(notes))
+
+
