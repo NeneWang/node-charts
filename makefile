@@ -10,7 +10,6 @@ save:
 
 new:
 	npm version patch -m "${m}"
-	make save
 	npm publish
 
 uninstall:
