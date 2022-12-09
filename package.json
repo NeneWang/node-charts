@@ -1,5 +1,5 @@
 {
-  "name": "ervy",
+  "name": "@wangnene2/chart",
   "version": "1.0.7",
   "description": "Bring charts to terminal.",
   "keywords": [
@@ -27,7 +27,7 @@
       "site"
     ]
   },
-  "author": "chunqiuyiyu <chunqiuyiyu@outlook.com> (https://www.chunqiuyiyu.com/)",
+  "author": "Forked by nenewang <wangnelson2@gmail.com> Original author: chunqiuyiyu <chunqiuyiyu@outlook.com> (https://www.chunqiuyiyu.com/)",
   "license": "MIT",
   "devDependencies": {
     "browserify": "^16.5.0",
@@ -35,10 +35,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chunqiuyiyu/ervy.git"
+    "url": "git+https://github.com/nenewang/node-chart.git"
   },
   "bugs": {
-    "url": "https://github.com/chunqiuyiyu/ervy/issues"
+    "url": "https://github.com/nenewang/node-chart/issues"
   },
-  "homepage": "https://www.chunqiuyiyu.com/ervy/"
+  "homepage": "wangnelson.xyz"
 }

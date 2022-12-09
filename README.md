@@ -1,21 +1,11 @@
-```
-___________                    
-\_   _____/_________  _____.__.
- |    __)_\_  __ \  \/ <   |  |
- |        \|  | \/\   / \___  |
-/_______  /|__|    \_/  / ____|
-        \/              \/     
-```
-[![Travis (.org)](https://img.shields.io/travis/chunqiuyiyu/ervy.svg?style=flat-square)](https://travis-ci.org/chunqiuyiyu/ervy)
+
+[![Travis (.org)](https://img.shields.io/travis/chunqiuyiyu/ervy.svg?style=flat-square)](https://travis-ci.org/chunqiuyiyu/@wangnene2/chart)
 ![GitHub](https://img.shields.io/github/license/chunqiuyiyu/ervy.svg?style=flat-square)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](https://standardjs.com)
-[![Install Size](https://flat.badgen.net/packagephobia/install/ervy)](https://packagephobia.now.sh/result?p=ervy)
+[![Install Size](https://flat.badgen.net/packagephobia/install/@wangnene2/chart)](https://packagephobia.now.sh/result?p=ervy)
 
 > Bring charts to terminal
 
-## Preview
-
-[Live Demo](https://www.chunqiuyiyu.com/ervy#demo)(powered by [jQuery Terminal Emulator](https://terminal.jcubic.pl/))
 
 ## Why build this
 There is no special reason, just because I love terminal and ASCII art. It's very cool! Hope you enjoy Ervy and make your terminal more beautiful.
@@ -61,6 +51,7 @@ Use [demo](/demo/index.js) to understand how to combine APIs in actual code.
 ## Credits
 
 [@jcubic](https://github.com/jcubic)
+[@chunqiuyiyu](https://github.com/chunqiuyiyu/ervy)
 
 ## License
 [MIT](./LICENSE)
