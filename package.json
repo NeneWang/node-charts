@@ -1,6 +1,6 @@
 {
   "name": "@wangnene2/chart",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Bring charts to terminal.",
   "keywords": [
     "cli",
