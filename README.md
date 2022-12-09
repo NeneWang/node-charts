@@ -7,8 +7,6 @@
 > Bring charts to terminal
 
 
-## Why build this
-There is no special reason, just because I love terminal and ASCII art. It's very cool! Hope you enjoy Ervy and make your terminal more beautiful.
 
 ## Supported Chart types
 ### Bar
