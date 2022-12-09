@@ -7,6 +7,7 @@ module.exports = {
   gauge: require('./lib/gauge'),
   scatter: require('./lib/scatter'),
   pie: require('./lib/pie'),
+  annotation: require('./lib/annotation'),
   bg,
   fg
 }
