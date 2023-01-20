@@ -8,6 +8,7 @@ module.exports = {
   scatter: require('./lib/scatter'),
   pie: require('./lib/pie'),
   annotation: require('./lib/annotation'),
+  heatmap: require('./lib/heatmap'),
   bg,
   fg
 }
