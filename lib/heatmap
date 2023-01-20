@@ -39,7 +39,7 @@ module.exports = (data, opts) => {
   verifyData(data)
 
   const newOpts = Object.assign({
-    width: 5, //Amount of weeks
+    width: 7, //Amount of weeks
     left: 2,
     height: 7,
     style: '# ',

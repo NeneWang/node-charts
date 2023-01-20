@@ -103,6 +103,7 @@ console.log(annotation(notes))
 const heatmap_plots = [];
 SIZE_SQUARE = 2
 WEEKS = 15
+
 for (let i = 1; i < 13; i++) {
   i < 6 ? heatmap_plots.push({ key: '1+', value: [i, i], style: bg('red', SIZE_SQUARE) })
     : heatmap_plots.push({ key: '1+', value: [i, 6], style: bg('red', SIZE_SQUARE) })
@@ -111,6 +112,6 @@ for (let i = 1; i < 13; i++) {
 heatmap_plots.push({ key: '3+', value: [2, 6], style: bg('blue', SIZE_SQUARE)})
 heatmap_plots.push({ key: '5+', value: [6, 0], style: bg('cyan', SIZE_SQUARE) })
 
-console.log(heatmap(heatmap_plots, { width: WEEKS , hName: "", vName: "", startsHAxis: 15, left: 4}) + '\n')
+console.log(heatmap(heatmap_plots, { width: WEEKS , hName: "", vName: "", startsHAxis: 4, left: 4}) + '\n')
 
 
