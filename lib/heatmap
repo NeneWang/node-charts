@@ -41,7 +41,7 @@ module.exports = (data, opts) => {
   const newOpts = Object.assign({
     width: 7, //Amount of weeks
     left: 2,
-    height: 7,
+    height: 8,
     style: '# ',
     sides: [1, 1],
     hAxis: ['+', '-', ''],
@@ -54,7 +54,7 @@ module.exports = (data, opts) => {
     vGap: 1,
     legendGap:0,
     startsHAxis: 15, //Start on the horizontal Line
-    startsVAxis: 1, //Starts on the vertical Line
+    startsVAxis: 0, //Starts on the vertical Line
     VLabels: ['Mo ', 'Tu ', 'We ', 'Th ', 'Fr ', 'Sa ', 'Su ']
   }, opts)
 //   newOpts.legendGap = newOpts.width/3*4
@@ -86,8 +86,8 @@ module.exports = (data, opts) => {
       allSides[index][0],
       allSides[index][1],
       styles[index],
-      item.value[0] * 2 + left + 1,
-      item.value[1],
+      item.value[0] * 2 + left + 3,
+      item.value[1] + 2,
       'data'
     )
   })
@@ -97,8 +97,8 @@ module.exports = (data, opts) => {
 
   for (let i = 1; i < height + 1; i++) {
     const yAxisLabels = (height - i) * ratio[1]
-    const currentLabeledY = VLabels[yAxisLabels];
-
+    const currentLabeledY = VLabels[yAxisLabels-1];
+    // console.log("currentLabeledY", currentLabeledY)
     tmp = ((height - i) % vGap === 0 && i !== height)
       ? (currentLabeledY).toString() : ''//vAis[0] being the X axis item
     result += EOL + tmp.padStart(left + 1) + vAxis[0] 

@@ -110,8 +110,13 @@ for (let i = 1; i < 13; i++) {
 }
 
 heatmap_plots.push({ key: '3+', value: [2, 6], style: bg('blue', SIZE_SQUARE)})
+heatmap_plots.push({ key: '3+', value: [0, 6], style: bg('blue', SIZE_SQUARE)})
+heatmap_plots.push({ key: '3+', value: [0, 2], style: bg('blue', SIZE_SQUARE)}) //This appears. but below 2 not.
+heatmap_plots.push({ key: '3+', value: [0, 1], style: bg('blue', SIZE_SQUARE)})
+heatmap_plots.push({ key: '3+', value: [0, 0], style: bg('blue', SIZE_SQUARE)})
+
 heatmap_plots.push({ key: '5+', value: [6, 0], style: bg('cyan', SIZE_SQUARE) })
 
-console.log(heatmap(heatmap_plots, { width: WEEKS , hName: "", vName: "", startsHAxis: 4, left: 4}) + '\n')
+console.log(heatmap(heatmap_plots, { width: WEEKS , hName: "", vName: "", startsHAxis: 0, left: 4}) + '\n')
 
 
