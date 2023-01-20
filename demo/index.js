@@ -6,6 +6,7 @@ const gauge = require('../lib/gauge')
 const scatter = require('../lib/scatter')
 const { bg, fg } = require('../lib/utils')
 const annotation = require('../lib/annotation')
+const heatmap = require('../lib/heatmap')
 
 // Scatter
 const scatterData = []
@@ -93,9 +94,23 @@ console.log(gauge(gaugeData2, {
 
 const notes = [
   {key: 'a', style: bg('green', 2)},
-  {key: 'b', style: bg('red', 2)},
+  {key: 'b', style: bg('red', 6)},
 ]
 
+
+
 console.log(annotation(notes))
+const heatmap_plots = [];
+SIZE_SQUARE = 2
+WEEKS = 15
+for (let i = 1; i < 17; i++) {
+  i < 6 ? heatmap_plots.push({ key: '1+', value: [i, i], style: bg('red', SIZE_SQUARE) })
+    : heatmap_plots.push({ key: '1+', value: [i, 6], style: bg('red', SIZE_SQUARE) })
+}
+
+heatmap_plots.push({ key: '3+', value: [2, 6], style: bg('blue', SIZE_SQUARE)})
+heatmap_plots.push({ key: '5+', value: [6, 0], style: bg('cyan', SIZE_SQUARE) })
+
+console.log(heatmap(heatmap_plots, { width: WEEKS , hName: "Weeks", vName: "Weekday", startsHAxis: 10, left: 4}) + '\n')
 
 
