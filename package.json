@@ -35,10 +35,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nenewang/node-chart.git"
+    "url": "git+https://github.com/nenewang/node-charts.git"
   },
   "bugs": {
-    "url": "https://github.com/nenewang/node-chart/issues"
+    "url": "https://github.com/nenewang/node-charts/issues"
   },
   "homepage": "wangnelson.xyz"
 }
