@@ -28,7 +28,7 @@ console.log(heatmap(heatmap_plots, { width: WEEKS , hName: "", vName: "", starts
 
 Results: 
 
-![](./img/2023-01-20-16-15-52.png)
+![](https://github.com/NeneWang/node-charts/raw/master/img/2023-01-20-16-15-52.png)
 
 Default options:
 
@@ -57,7 +57,7 @@ Default options:
 
 ### Bar
 
-![](./img/2024-01-25-09-54-05.png)
+![](https://github.com/NeneWang/node-charts/raw/master/img/2024-01-25-09-54-05.png)
 
 ```js
 const barData = [
@@ -75,7 +75,7 @@ console.log(bar(barData))
 
 ### Pie
 
-![](./img/2024-01-25-09-55-22.png)
+![](https://github.com/NeneWang/node-charts/raw/master/img/2024-01-25-09-55-22.png)
 
 ```js
 
@@ -108,7 +108,7 @@ const bulletData = [
   { key: 'Now', value: 15, style: bg('cyan'), barWidth: 1 }
 ```
 
-![](./img/2024-01-25-09-57-03.png)
+![](https://github.com/NeneWang/node-charts/raw/master/img/2024-01-25-09-57-03.png)
 
 ### Donut
 
@@ -128,7 +128,7 @@ const donutData2 = [
 ```
 
 
-![](./img/2024-01-25-09-57-48.png)
+![](https://github.com/NeneWang/node-charts/raw/master/img/2024-01-25-09-57-48.png)
 
 ### Gauge
 
@@ -148,11 +148,11 @@ console.log(gauge(gaugeData2, {
 
 ```
 
-![](./img/2024-01-25-09-58-17.png)
+![](https://github.com/NeneWang/node-charts/raw/master/img/2024-01-25-09-58-17.png)
 
 ### Scatter Data
 
-![](./img/2024-01-25-09-53-37.png)
+![](https://github.com/NeneWang/node-charts/raw/master/img/2024-01-25-09-53-37.png)
 
 ```js
 const scatterData = []
