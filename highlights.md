@@ -16,14 +16,14 @@
 ![](./img/2024-01-25-14-18-32.png)
 
 
-![Alt text](./image-1.png)
+![Alt text](./img/image-1.png)
 
 ### Attempt 2
 
 
 ![](./img/2024-01-25-14-18-43.png)
 
-![Alt text](./image-2.png)
+![Alt text](./img/image-2.png)
 
 
 
@@ -66,4 +66,42 @@ Therefore convert the following into one that uses the ordered edges to create i
   }
 ```
 
+Lets try again:
+
+```js
+
+
+  const edgesSorted = {
+    1: [],
+    2: ['b', 'e'],
+    3: [...formations[2], 'a'],
+    4: [...formations[3], 'a'],
+    5: [...formations[4], 'a'],
+    6: [...formations[5], 'a'],
+  }
+
+  ...
+  const render_plots = {};
+
+  ...
+  
+  radarData.forEach((feature, index) => {
+    const { name, scaled_value, value } = feature;
+    const feature_position = selectedFormation[index];
+    const [x, y] = getPosition(scaled_value, feature_position);
+    const colorForFeature = use_unique_colors ? colors[index] : default_color;
+    plots[y][x * 2] = bg(colorForFeature, 2);
+    // render_plots.push([x * 2, y]); // To be used for renering the perimeter.
+    render_plots[feature_position] = [x * 2, y];
+  });
+
+```
+
+That means that I am storing the radar featured position 'a', 'b'... as keys. And the values are the coordinates. 
+
+
+
+![](./img/2024-01-25-14-45-03.png)
+
+![Alt text](image-1.png)
 
