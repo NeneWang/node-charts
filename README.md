@@ -3,14 +3,13 @@
 
 ## New Charts
 
-Heatmap:
+Date Heatmap:
 
 Sample Code:
 
 
 ```js
 
-console.log(annotation(notes))
 const heatmap_plots = [];
 SIZE_SQUARE = 2
 WEEKS = 15
