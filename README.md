@@ -1,9 +1,4 @@
 
-[![Travis (.org)](https://img.shields.io/travis/chunqiuyiyu/ervy.svg?style=flat-square)](https://travis-ci.org/chunqiuyiyu/@wangnene2/chart)
-![GitHub](https://img.shields.io/github/license/chunqiuyiyu/ervy.svg?style=flat-square)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](https://standardjs.com)
-[![Install Size](https://flat.badgen.net/packagephobia/install/@wangnene2/chart)](https://packagephobia.now.sh/result?p=ervy)
-
 > Bring charts to terminal
 
 ## New Charts
@@ -11,6 +6,7 @@
 Heatmap:
 
 Sample Code:
+
 
 ```js
 
@@ -58,27 +54,120 @@ Default options:
   }, opts)
 ```
 
-## Supported Chart types
-
-> From Previous Version
 
 ### Bar
-![](/site/imgs/bar.png)
+
+![](./img/2024-01-25-09-54-05.png)
+
+```js
+const barData = [
+  { key: 'A', value: 5, style: '*' },
+  { key: 'B', value: 3, style: '+' },
+  { key: 'C', value: 11 },
+  { key: 'D', value: 1, style: bg('red') },
+  { key: 'E', value: 5, style: bg('green') },
+  { key: 'F', value: 7, style: bg('blue'), padding: 1 },
+  { key: 'G', value: 0, style: bg('yellow') }
+]
+
+console.log(bar(barData))
+```
 
 ### Pie
-![](/site/imgs/pie.png)
 
+![](./img/2024-01-25-09-55-22.png)
+
+```js
+
+// Pie
+const pieData1 = [
+  { key: 'A', value: 5, style: '* ' },
+  { key: 'B', value: 10, style: '+ ' },
+  { key: 'C', value: 10, style: '# ' },
+  { key: 'D', value: 10, style: 'O ' }
+]
+
+const pieData2 = [
+  { key: 'A', value: 5, style: bg('cyan', 2) },
+  { key: 'B', value: 5, style: bg('yellow', 2) },
+  { key: 'C', value: 5, style: bg('magenta', 2) },
+  { key: 'D', value: 5, style: bg('white', 2) }
+]
+
+console.log(pie(pieData1, { left: 1 }))
+console.log(pie(pieData2, { left: 1 }))
+```
 ### Bullet
-![](/site/imgs/bullet.png)
+
+```js
+
+const bulletData = [
+  { key: 'Month', value: 5 },
+  { key: 'Week', value: 3, style: fg('red', '*') },
+  { key: 'Day', value: 20, style: bg('blue'), barWidth: 1 },
+  { key: 'Now', value: 15, style: bg('cyan'), barWidth: 1 }
+```
+
+![](./img/2024-01-25-09-57-03.png)
 
 ### Donut
-![](/site/imgs/donut.png)
+
+```js
+const donutData1 = [
+  { key: 'A', value: 10, style: fg('cyan', '+ ') },
+  { key: 'B', value: 10, style: fg('red', '* ') }
+]
+```
+
+```js
+const donutData2 = [
+  { key: 'A', value: 20, style: bg('green', 2) },
+  { key: 'B', value: 20, style: bg('blue', 2) },
+  { key: 'C', value: 20, style: bg('yellow', 2) }
+]
+```
+
+
+![](./img/2024-01-25-09-57-48.png)
 
 ### Gauge
-![](/site/imgs/gauge.png)
 
-### Scatter
-![](/site/imgs/scatter.png)
+```js
+const gaugeData1 = [
+  { key: 'A', value: 0.5 }
+]
+
+const gaugeData2 = [
+  { key: 'PR', value: 0.3 }
+]
+
+console.log(gauge(gaugeData1, { radius: 7 }))
+console.log(gauge(gaugeData2, {
+  radius: 7, style: bg('green', 2), bgStyle: bg('magenta', 2)
+}))
+
+```
+
+![](./img/2024-01-25-09-58-17.png)
+
+### Scatter Data
+
+![](./img/2024-01-25-09-53-37.png)
+
+```js
+const scatterData = []
+
+for (let i = 1; i < 17; i++) {
+  i < 6 ? scatterData.push({ key: 'A', value: [i, i], style: fg('red', '*') })
+    : scatterData.push({ key: 'A', value: [i, 6], style: fg('red', '*') })
+}
+
+scatterData.push({ key: 'B', value: [2, 6], style: fg('blue', '# '), sides: [2, 2] })
+scatterData.push({ key: 'C', value: [6, 9], style: bg('cyan', 2) })
+
+console.log(scatter(scatterData, { legendGap: 18, width: 15 }) + '\n')
+
+```
 
 ## APIs
 
