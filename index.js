@@ -9,6 +9,7 @@ module.exports = {
   pie: require('./lib/pie'),
   annotation: require('./lib/annotation'),
   heatmap: require('./lib/heatmap'),
+  radar: require('./lib/radar'),
   bg,
   fg
 }

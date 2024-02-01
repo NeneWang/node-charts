@@ -105,3 +105,64 @@ That means that I am storing the radar featured position 'a', 'b'... as keys. An
 
 ![Alt text](image-1.png)
 
+I can see that the slope in this case is zero.
+
+(End cases)
+
+![Alt text](image-2.png)
+
+
+
+Which also seems to translate that the y basically starts there (since it has to perform such a big jump).
+
+So my idea is:
+
+- If the slope is exactly 0. Try to draw a line from the startY to the endY with one of increment?.
+
+```js
+if (slope == 0) {
+        for (let i = startX; i <= endX; i++) {
+          plots[startY][i] = bg('white', 2);
+        }
+      }
+```
+
+![](./img/2024-02-01-13-51-58.png)
+
+
+
+
+Now lets see if it works for the other cases.
+
+```bash
+
+
+C:\github\testing\node-charts\lib\radar.js:145
+    for (let edgeIdx = 0; edgeIdx < edgeFormationSelected.length - 1; edgeIdx++) {
+                                                          ^
+
+TypeError: Cannot read properties of undefined (reading 'length')
+    at module.exports (C:\github\testing\node-charts\lib\radar.js:145:59)
+    at Object.<anonymous> (C:\github\testing\node-charts\demo\index.js:170:48)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)
+    at node:internal/main/run_main_module:23:47
+
+Node.js v20.9.0
+
+```
+
+
+```js
+
+edgeFormationSelected = edgesSorted[radarData.length];
+for (let edgeIdx = 0; edgeIdx < edgeFormationSelected.length - 1; edgeIdx++) {
+
+```
+
+
+
+
