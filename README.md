@@ -1,9 +1,97 @@
 
 > Bring charts to terminal
 
-## New Charts
+## Charts
 
-Date Heatmap:
+
+### Radar
+
+
+*Here an example of a 6-fetured radar for a typical rpg stat.*
+```js
+const stats = [{
+  name: "STR",
+  value: 4
+}, {
+  name: "DEX",
+  value: 1
+}, {
+  name: "VIT",
+  value: 6
+}, {
+  name: "INT",
+  value: 5
+}, {
+  name: "WIS",
+  value: 3
+}, {
+  name: "HP",
+  value: 6
+}
+];
+let { render, labelsWithColors } = radar(stats);
+console.log(render);
+console.log(annotation(labelsWithColors));
+```
+![](./img/image-3.png)
+
+
+Adapts the radar based on the features provided.
+
+```js
+
+const stats4Only = [{
+  name: "feature1",
+  value: 4
+}, {
+  name: "feature2",
+  value: 6
+}, {
+  name: "feature3",
+  value: 6
+}, {
+  name: "feature4",
+  value: 3
+}
+];
+let dataStast4 = radar(stats4Only);
+console.log(dataStast4.render);
+console.log(annotation(dataStast4.labelsWithColors));
+
+```
+
+![Alt text](./img/image-4.png)
+
+
+#### Parameters
+
+- `radarData` (required): A list of dictionaries containing radar data.
+  - Example:
+    ```javascript
+    [
+      {
+        "name": "feature1",
+        "value": 8
+      }
+    ]
+    ```
+
+- `width` (optional): Width of the radar chart. Default value is `6`.
+
+- `use_unique_colors` (optional): Determines whether to use unique colors for each feature based on their order. Default value is `false`.
+
+- `default_color` (optional): Color to use if `use_unique_colors` is set to `false`. Default value is `'yellow'`.
+
+- `draw_perimeter` (optional): Whether to draw the perimeter of the radar chart. Default value is `true`.
+
+- `write_labels` (optional): Whether to write labels for features. Default value is `true`.
+
+#### Note
+
+- Values in `radarData` are automatically scaled to a range of 0-6 for calculating distances.
+
+
+### Dated Heatmap:
 
 Sample Code:
 
@@ -28,6 +116,19 @@ console.log(heatmap(heatmap_plots, { width: WEEKS , hName: "", vName: "", starts
 Results: 
 
 ![](https://github.com/NeneWang/node-charts/raw/master/img/2023-01-20-16-15-52.png)
+
+
+**Data Array**
+
+The data array is an array of objects, where each object represents a data point in the heatmap. Each object in the data array should have the following properties:
+
+- `key` (string): The identifier for the data point. This could be a date, a time, or any other identifier that makes sense for your data.
+
+- `value` (array): An array of two numbers. The first number represents the start of the range for this data point, and the second number represents the end of the range.
+
+- `style` (function): A function that returns a string representing the style to be applied to this data point. The function takes two arguments: a string representing the color, and a constant representing the size of the square.
+
+
 
 Default options:
 
@@ -188,6 +289,9 @@ Supported color: black, red, green, yellow, blue, magenta, cyan and white.
 Use [demo](/demo/index.js) to understand how to combine APIs in actual code.
 
 ## Credits
+
+It would not be possible without the work of the following people:
+
 
 [@jcubic](https://github.com/jcubic)
 [@chunqiuyiyu](https://github.com/chunqiuyiyu/ervy)
