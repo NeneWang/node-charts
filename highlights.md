@@ -164,5 +164,29 @@ for (let edgeIdx = 0; edgeIdx < edgeFormationSelected.length - 1; edgeIdx++) {
 ```
 
 
+## Improving the Heatmmapping
+
+
+Lets see Pandas implemnetation of it
+
+```py
+import numpy as np 
+from pandas import DataFrame
+import seaborn as sns
+%matplotlib inline
+
+Index= ['aaa', 'bbb', 'ccc', 'ddd', 'eee']
+Cols = ['A', 'B', 'C', 'D']
+df = DataFrame(abs(np.random.randn(5, 4)), index=Index, columns=Cols)
+
+sns.heatmap(df, annot=True)
+
+```
+
+U can see that it indicates the index, and passes (our equivalent to an 2D array) with option of selecting what should go thoguh the cols and rows.
+
+We in this case should by default: "set as index the different features"
+Set as cols the different weeks (only show pair, and Current.)
+
 
 
